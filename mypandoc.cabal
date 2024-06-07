@@ -1,0 +1,55 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           mypandoc
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/EpitechPromo2027/B-FUN-400-MAR-4-1-mypandoc-theo.fabiano#readme>
+homepage:       https://github.com/EpitechPromo2027/B-FUN-400-MAR-4-1-mypandoc-theo.fabiano#readme
+bug-reports:    https://github.com/EpitechPromo2027/B-FUN-400-MAR-4-1-mypandoc-theo.fabiano/issues
+author:         Théo Fabiano
+maintainer:     theo.fabiano@epitech.eu
+copyright:      2024 Théo Fabiano
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/EpitechPromo2027/B-FUN-400-MAR-4-1-mypandoc-theo.fabiano
+
+library
+  exposed-modules:
+      Conf
+      Lib
+      ParsingJson
+      ParsingXml
+      PrinterJson
+      PrinterMarkdown
+      PrinterXml
+  other-modules:
+      Paths_mypandoc
+  autogen-modules:
+      Paths_mypandoc
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base
+  default-language: Haskell2010
+
+executable mypandoc-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_mypandoc
+  autogen-modules:
+      Paths_mypandoc
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base
+    , mypandoc
+  default-language: Haskell2010
